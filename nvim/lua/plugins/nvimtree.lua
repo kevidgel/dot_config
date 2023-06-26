@@ -7,5 +7,5 @@ return {
     config = function()
         require("nvim-tree").setup {}
     end,
-    lazy = true,
+    lazy = false,
 }

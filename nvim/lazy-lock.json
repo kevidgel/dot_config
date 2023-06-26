@@ -1,6 +1,7 @@
 {
   "LuaSnip": { "branch": "master", "commit": "3d2ad0c0fa25e4e272ade48a62a185ebd0fe26c1" },
   "barbar.nvim": { "branch": "master", "commit": "b8ca6076f75e49cca1fa0288c080f3d10ec2152c" },
+  "bufferline.nvim": { "branch": "main", "commit": "41660189da6951d14436147dff30ed7f0d12ed01" },
   "catppuccin": { "branch": "main", "commit": "506a4aa13443e0104ea49b99947cc09488d0791d" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
@@ -30,7 +31,7 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "87dfaa9a9c251388cf4f01b9d4078c29d1fc8803" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "tmuxline.vim": { "branch": "master", "commit": "4119c553923212cc67f4e135e6f946dc3ec0a4d6" },
+  "toggleterm.nvim": { "branch": "main", "commit": "95204ece0f2a54c89c4395295432f9aeedca7b5f" },
   "vim-fugitive": { "branch": "master", "commit": "43f18ab9155c853a84ded560c6104e6300ad41da" },
-  "vim-gitgutter": { "branch": "master", "commit": "883d60ec0e7d840aea811f4f38a882d7c1efbdb5" },
   "vim-markdown": { "branch": "master", "commit": "cc82d88e2a791f54d2b6e2b26e41f743351ac947" }
 }

@@ -5,9 +5,21 @@ return {
     lazy = false,
     config = function ()
         require("telescope").setup {
+            defaults = {
+                vimgrep_arguments = {
+                    'rg',
+                    '--color=never',
+                    '--no-heading',
+                    '--with-filename',
+                    '--line-number',
+                    '--column',
+                    '--smart-case',
+                    '-u' -- thats the new thing
+                },
+            },
             extensions = {
                 file_browser = {
-                    theme = "ivy",
+                    theme = "dropdown",
                     -- disables netrw and use telescope-file-browser in its place
                     hijack_netrw = true,
                     mappings = {
@@ -22,7 +34,6 @@ return {
             },
 
         }
-        require("telescope").load_extension('projects')
         require("telescope").load_extension('file_browser')
     end
 }

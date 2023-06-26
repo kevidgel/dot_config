@@ -13,8 +13,19 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- git 
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>gg', builtin.git_status, {})
+
+-- treesitter
+vim.keymap.set('n', '<leader>tr', builtin.treesitter, {})
 map('n', '<leader>fp', '<Cmd>Telescope projects<CR>', opts)
 map('n', '<leader>l', '<Cmd>Lazy<CR>', opts)
+
+--term
+map('n', '<leader>tt', '<Cmd>:ToggleTerm size=40 dir=git_dir direction=float<CR>', opts)
+map('t', '<esc><esc>', '<Cmd>:ToggleTerm size=40 dir=git_dir direction=float<CR>', opts)
 
 map('n', '†', ':NvimTreeToggle<CR>',opts)
 -- barbar keybindings

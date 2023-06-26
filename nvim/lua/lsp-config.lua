@@ -18,10 +18,10 @@ local on_attach = function(_, bufnr)
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-  nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+  nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-  nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-  nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
+  nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+  nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
@@ -60,7 +60,7 @@ local servers = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
-  },
+},
 }
 
 -- Setup neovim lua configuration
@@ -134,6 +134,13 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
