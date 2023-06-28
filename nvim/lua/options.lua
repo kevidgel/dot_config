@@ -10,6 +10,8 @@ vim.opt.expandtab=true
 vim.opt.shiftwidth=4
 vim.opt.autoindent=true
 vim.opt.number=true
+vim.opt.cursorline=true
+vim.opt.relativenumber=true
 vim.opt.numberwidth=1
 vim.opt.signcolumn="yes:1"
 

@@ -4,20 +4,6 @@ local lldb_adapter = {
 	name = "lldb",
 }
 
-local new_cpp_debug_config = function(exe_path)
-	return {
-		name = "Launch",
-		type = "lldb",
-		request = "launch",
-		program = exe_path and exe_path or function()
-			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-		end,
-		cwd = "${workspaceFolder}",
-		stopOnEntry = false,
-		args = {},
-	}
-end
-
 local old_cpp_debug_config = function()
     return {
         name = "RobloxPlayer x64 NoOpt",
