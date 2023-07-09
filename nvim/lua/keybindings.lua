@@ -24,8 +24,8 @@ map('n', '<leader>fp', '<Cmd>Telescope projects<CR>', opts)
 map('n', '<leader>l', '<Cmd>Lazy<CR>', opts)
 
 --term
-map('n', '<leader>tt', '<Cmd>:ToggleTerm size=40 dir=git_dir direction=float<CR>', opts)
-map('t', '<esc><esc>', '<Cmd>:ToggleTerm size=40 dir=git_dir direction=float<CR>', opts)
+map('n', '<leader>tt', '<Cmd>:ToggleTerm size=80 dir=git_dir direction=vertical<CR>', opts)
+map('t', '<esc><esc>', '<Cmd>:ToggleTerm size=80 dir=git_dir direction=vertical<CR>', opts)
 
 map('n', '†', ':NvimTreeToggle<CR>',opts)
 -- barbar keybindings
@@ -78,3 +78,10 @@ map('n', '<Space>db', '<Cmd>lua require("dap").toggle_breakpoint()<CR>', opts)
 map('n', '<Space>dc', '<Cmd>lua require("dap").continue()<CR>', opts)
 map('n', '<Space>do', '<Cmd>lua require("dap").step_over()<CR>', opts)
 map('n', '<Space>di', '<Cmd>lua require("dap").step_into()<CR>', opts)
+
+
+-- VS Tasks
+map('n', '<Leader>ta', '<Cmd>lua require("telescope").extensions.vstask.tasks()<CR>')
+map('n', '<Leader>ti', '<Cmd>lua require("telescope").extensions.vstask.inputs()<CR>')
+map('n', '<Leader>th', '<Cmd>lua require("telescope").extensions.vstask.history()<CR>')
+map('n', '<Leader>tl', '<Cmd>lua require("telescope").extensions.vstask.launch()<CR>')

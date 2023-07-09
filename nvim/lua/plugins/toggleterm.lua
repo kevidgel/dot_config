@@ -4,7 +4,6 @@ return {
     config = function ()
         local term = require("toggleterm");
         term.setup()
-
     end,
     lazy = false,
 }
