@@ -1,3 +1,6 @@
 # dot_config
 
-these are my config files
+These are my config files.
+I currently use wezterm, nvim.
+
+## nvim 
