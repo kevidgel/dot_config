@@ -56,7 +56,7 @@ config.font_rules =
     }
 }
 
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'GruvboxDarkHard'
 config.window_padding = {
   left = 0,
   right = 0,

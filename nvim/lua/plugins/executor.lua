@@ -12,5 +12,5 @@ return {
             }
         }
     },
-    lazy = false,
+    lazy = true,
 }

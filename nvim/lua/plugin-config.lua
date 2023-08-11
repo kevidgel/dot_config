@@ -16,25 +16,6 @@ vim.g.NERDTreeDirArrowExpandable = '▸'
 vim.g.NERDTreeDirArrowCollapsible = '▾'
 vim.NERDTreeShowHidden = 1
 
--- Lightline
-vim.g.tmuxline_powerline_separators = 0
-vim.g.lightline = {
-    colorscheme = 'catppuccin',
-    active = {
-        left = {
-		{ 'mode', 'paste' },
-		{ 'gitbranch', 'readonly', 'absolutepath', 'modified' }
-	}
-    },
-    component_function = {
-        gitbranch = 'FugitiveHead'
-    },
-    enable = {
-        statusline = 1,
-        tabline = 0,
-    }
-}
-
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
 
@@ -56,7 +37,6 @@ local TelescopeColor = {
 	TelescopeResultsTitle = { fg = colors.mantle },
 	TelescopePreviewTitle = { bg = colors.green, fg = colors.crust },
 }
-
 for hl, col in pairs(TelescopeColor) do
 	vim.api.nvim_set_hl(0, hl, col)
 end

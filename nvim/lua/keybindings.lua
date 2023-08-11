@@ -23,6 +23,10 @@ vim.keymap.set('n', '<leader>tr', builtin.treesitter, {})
 map('n', '<leader>fp', '<Cmd>Telescope projects<CR>', opts)
 map('n', '<leader>l', '<Cmd>Lazy<CR>', opts)
 
+-- harpoon marks
+map('n', '<leader>hh', '<Cmd>Telescope harpoon marks<CR>', opts)
+map('n', '<leader>ha', '<Cmd>lua require("harpoon.mark").add_file()<CR>', opts)
+
 --term
 map('n', '<leader>tt', '<Cmd>:ToggleTerm size=80 dir=git_dir direction=vertical<CR>', opts)
 map('t', '<esc><esc>', '<Cmd>:ToggleTerm size=80 dir=git_dir direction=vertical<CR>', opts)
@@ -80,8 +84,3 @@ map('n', '<Space>do', '<Cmd>lua require("dap").step_over()<CR>', opts)
 map('n', '<Space>di', '<Cmd>lua require("dap").step_into()<CR>', opts)
 
 
--- VS Tasks
-map('n', '<Leader>ta', '<Cmd>lua require("telescope").extensions.vstask.tasks()<CR>')
-map('n', '<Leader>ti', '<Cmd>lua require("telescope").extensions.vstask.inputs()<CR>')
-map('n', '<Leader>th', '<Cmd>lua require("telescope").extensions.vstask.history()<CR>')
-map('n', '<Leader>tl', '<Cmd>lua require("telescope").extensions.vstask.launch()<CR>')

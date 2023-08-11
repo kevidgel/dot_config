@@ -1,4 +1,4 @@
-return {
+local cat = {
     "catppuccin/nvim",
     name = "catppuccin",
     config = function ()
@@ -49,3 +49,9 @@ return {
 
     end
 }
+local gruv = {
+    "sainnhe/gruvbox-material",
+    priority = 1000,
+    lazy = false,
+}
+return cat 
